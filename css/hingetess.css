@@ -1,0 +1,46 @@
+h1{
+	font-family: 'Syncopate', sans-serif;
+	font-size:30px;
+	font-weight:bold;
+}
+#content-box {
+
+				width:600;
+				height:1000;
+				margin:auto;
+			}
+#title-box {
+	padding:25px 0 0 0;
+	float:left;
+
+	width:600px;
+	margin:0px
+}		
+#ui-container {
+
+}		
+#ui-col1,
+#ui-col2,
+#ui-col3{
+	text-align:center;
+	float:left;
+	width:200px;
+}
+#ui-col1 {
+	text-align:left;
+}
+#quadrilateral-canvas, 
+#theta-slider, 
+#option-buttons, 
+#quad-facts, 
+#height-and-width-canvas{
+
+}
+.clear{
+	clear:both;
+}
+
+#hta_tess_container  {float:top; top:204px; border:5px solid #000ff0;}
+#hta_tess {position:relative}
+#cyclicOverlay      {position:absolute; top:0px; left:0px; }
+#tessOverlay      { position: absolute; top: 205px; left: 6px; }

@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Hinged Tessellation App</title>
+		<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+
+        <script src="js/simple2d.js"></script>
+
+        <script type="text/javascript" src="js/canvasStack1v00.js"></script> 
+        <script src="js/hingetess.js"></script>
+
+
+        <style type="text/css">
+			@import "css/reset.css";
+			body{
+				font-family: sans-serif;
+				background-color: lightgrey;
+			}
+			h1{
+				font-size:30px;
+				font-weight:bold;
+			}
+			#content-box {
+
+							width:600;
+							height:1000;
+							margin:auto;
+						}
+			#title-box {
+				padding:25px 0 0 0;
+				float:left;
+
+				width:600px;
+				margin:0px
+			}		
+			#ui-container {
+
+			}		
+			#ui-col1,
+			#ui-col2,
+			#ui-col3{
+				text-align:center;
+				float:left;
+				width:200px;
+			}
+
+			#ui-col1 p{
+				padding:10px;
+				text-align:left;
+				line-height: 1.5em;
+			}
+			#quadrilateral-canvas, 
+			#theta-slider, 
+			#option-buttons, 
+			#quad-facts, 
+			#height-and-width-canvas{
+
+			}
+			.clear{
+				clear:both;
+			}
+
+            #hta_tess_container  {float:top; top:204px; border:5px solid #000ff0;}
+			#hta_tess {position:relative}
+            #cyclicOverlay      {position:absolute; top:0px; left:0px; }
+			#tessOverlay      { position: absolute; top: 205px; left: 6px; }
+        </style> 
+    </head>
+    
+    <body>
+	<div id = "content-box">
+	    <div id = "title-box">
+	        <h1> Hinged Tessellations </h1>
+	    </div>
+	    <div class="clear"></div>
+	    <div id = "ui-container">
+	        <div id="ui-col1">
+	        <br>
+	        <p>
+	            Try moving the vertices, switching from a trapezoid to a cyclic quadrilateral, and changing the angle at which the tessellation is open! </p>
+	        </div>
+	        <div id="ui-col2">
+	            <div id='quadrilateral-option'>
+	                <input type='radio' name='task-sort' id='trap' checked><label id="trap_label" for='trap'>trapezoid</label>
+	                <input type='radio' name='task-sort' id='cyclic'><label id="cyclic_label"  for='cyclic'>cyclic</label>
+	            </div>
+	            <div id="quad_canvas" style="position:relative; width:200px; height:200px"></div>
+	        </div>
+	        <div id = "ui-col3">
+	            <div id = "theta-slider">
+	                    <label > Angle Open: </label>
+	                    <div id="sliderInput-slider" class="ui-slider-1" style="margin:10px;">
+	                        <div class="ui-slider-handle"></div>
+	                    </div>
+	                    <input type="text" class="sliderInput-input" id="slider-input" />
+	            </div>
+	            <div id = "option-buttons">
+	                <input type="checkbox" id="show_grid" width="200px"/><label for="show_grid" width="200px">Show Grid</label>
+	            </div>
+	        </div>
+	        <div class="clear">
+	        </div>
+	    </div>
+	    <div id = "tessellation-canvas">
+	        <div id="hta_tess">
+	                <canvas id="tess_canvas" width="600" height="600"></canvas>
+	            </div>
+	    </div>
+	    <div id = "footer">
+	    	<br>
+	        <p> Sorry for the bugs, but this was from a few years back and one of my first forays into programming for the web!  Why it's jumping at 0, 90 and 180 degrees sometimes is beyond me right now - but one day maybe I'll get the chance to re-write this with my current skills. </p> <br>
+	        <p> If you're curious, read this blog article about <a href="http://algrant.ca/projects/hinged-tessellations"> hinged tessellations </a> </p>
+	    </div>
+	</div>
+</html>
